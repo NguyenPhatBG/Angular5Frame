@@ -1,0 +1,77 @@
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">{{ title }}</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a [routerLink]="['/home']">
+            <span>
+              <mat-icon>home</mat-icon>
+            </span>
+            Home
+          </a>
+        </li>
+        <li routerLinkActive="active">
+          <a [routerLink]="['/product']">
+            <span>
+              <mat-icon>shopping_cart</mat-icon>
+            </span>
+            Products
+          </a>
+        </li>
+        <li routerLinkActive="active">
+          <a [routerLink]="['/contact']">
+            <span>
+              <mat-icon>contacts</mat-icon>
+            </span>
+            Contact
+          </a>
+        </li>
+        <li routerLinkActive="active" class="dropdown">
+          <a [routerLink]="['/document']" class="dropdown-toggle" data-toggle="dropdown">
+            <span>
+              <mat-icon>trending_up</mat-icon>
+            </span>
+            Documents
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a [routerLink]="['/document', 'pipes']">Pipes</a>
+            </li>
+            <li>
+              <a [routerLink]="['/document', 'forms']">Forms</a>
+            </li>
+            <li>
+              <a href="#">Something else here</a>
+            </li>
+            <li>
+              <a href="#">Separated link</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#">
+            <span>
+              <mat-icon>power_settings_new</mat-icon>
+            </span> Sign Up</a>
+        </li>
+        <li>
+          <a href="#">
+            <span>
+              <mat-icon>lock_open</mat-icon>
+            </span> Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
